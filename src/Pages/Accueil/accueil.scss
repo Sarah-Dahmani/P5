@@ -1,0 +1,20 @@
+.banner {
+
+    .fond {
+        background-color: #000;
+        height: 100%;
+        width: 100%;
+        opacity: 60%;
+    }
+
+    h1 {
+        opacity: 100%;
+    }
+}
+
+.CardsListWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}

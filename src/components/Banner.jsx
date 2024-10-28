@@ -1,10 +1,12 @@
 import '../SASS/components/banner.scss'
 
 const Banner = (props) => {
-    let alpha = (props.title !== undefined && props.title !== "") ? 0.6 : 0;
     return (
-        <div className='banner' style={{backgroundImage:'url(${props.bgImage})', backgroundColor:'rgba(0,0,0,${alpha}'}}>
-            <h1>{props.title}</h1>
+            <div className='banner'>
+            <img src={props.bgImage} alt="banner" />
+            <div class="fond">
+                <h1>{props.title}</h1>
+            </div>
         </div>
     )
 }
