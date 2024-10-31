@@ -1,6 +1,44 @@
+@import "./variables.scss";
+
 body {
-    padding: 0;
     margin: 0;
     font-family: 'Montserrat';
     font-size: 22px;
+}
+
+@each $name, $color in $colors {
+    .text-#{$name} {
+        color:  $color;
+    }
+
+    .background-#{$name} {
+        background-color: $color;
+    }
+}
+
+@media (max-width: map-get($breakpoints, mobile) ) {
+    .hidden-mobile {
+        display:  none;
+    }
+    .col-mobile-1 {
+        width: 100%;
+    }
+}
+
+@media (min-width: map-get($breakpoints, desktop) ) {
+    .hidden-desktop {
+        display:  none;
+    }
+    .col-desktop-1 {
+        width: 100%;
+    }
+    .col-desktop-3 {
+        width: calc((100% - $gap * 2) / 3);
+    }
+}
+
+@mixin mediamobile() {	
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
 }

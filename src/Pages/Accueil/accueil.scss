@@ -1,11 +1,19 @@
-.banner {
-
-   
+.container-cardsList {
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
 }
 
 .CardsListWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
+    background-color: #f6f6f6;
+    border-radius: 15px; 
+    width: 100%;
+
+}
+
+.container-bannerhome {
+    padding: 50px;
 }

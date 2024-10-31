@@ -12,6 +12,7 @@
     }
     &__nav a {
         text-decoration: none;
+        color: black;
     }
 
     &__nav a.active {
@@ -19,3 +20,19 @@
     }
 
 } 
+
+@include mediamobile() {
+    .header {
+        width: 100%;
+
+        img {
+            width: 20%;
+        }
+
+        nav {
+            font-size: small;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}

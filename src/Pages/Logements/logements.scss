@@ -1,7 +1,71 @@
-@import '../../SASS/base/variables.scss';
+
+.logementBody {
+    padding: 30px;
+}
+
+.logementCardDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+
+
+    h1 {       
+       margin-bottom: 0px; 
+    }
+}
+
+.logementTitleAndLocation {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.logementTitleAndHost {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.hostLogement {    
+        display: flex; 
+        align-items: center;
+
+
+        .hostLogementName {
+            margin: 0;
+            font-size: 1em; 
+            margin-right: 1em;
+            display: inline-block;
+            width: 6.25em;
+            text-align: right;    
+
+        }
+
+        img {
+            border-radius: 50%;
+            width: 1.88em; 
+            height: 1.88em; 
+        }
+    }  
+
+    .logementTagAndRating {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+
+    }
+
+
+//tags
 
 .badge {
-    
     padding: 5px;
     margin: 2px;
     border-radius: 20px;
@@ -13,4 +77,20 @@
 
 .fa-star-inactive {
     color: lightgray;
+}
+
+//collapse
+
+.collapseWrapperLogement {
+    display: flex;
+    flex-direction: row;
+    padding-top : 10px;
+    justify-content: space-between;
+    
+
+    .collapse {                
+        width: 48%; 
+           
+
+    }
 }

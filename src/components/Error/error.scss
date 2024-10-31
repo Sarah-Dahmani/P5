@@ -1,4 +1,3 @@
-@import '../../SASS/base/variables.scss';
 
 .error-container {
     display: flex;
@@ -6,14 +5,25 @@
     width: 100%;
     height: 100%;
     align-items: center;
+    color: RGB(255, 96, 96);
+
+    a {
+        color: black;
+        margin-bottom: 8rem;
+        font-size: 1rem;
+    }
 
 }
 
 .error-code {
     
     font-size: 10rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
 }
 
 .error-message {
     text-align: center;
+    margin-bottom: 7rem;
+    font-weight: bold;
 }
