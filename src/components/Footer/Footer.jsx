@@ -2,7 +2,7 @@ import logoDesktopFooter from "../../assets/Logo-Kasa-Desktop-Footer.png"; // Im
 
 function Footer() {
     return (
-        <footer className="footer text-white"> {/* Conteneur principal pour le pied de page */}
+        <footer className="footer text-tertiary"> {/* Conteneur principal pour le pied de page */}
             <img src={logoDesktopFooter} alt="logo Kasa" className="footer__logo" /> {/* Affichage du logo avec un texte alternatif */}
             <p className="footer__text">© 2020 Kasa. All rights reserved</p> {/* Texte de copyright */}
         </footer>

@@ -1,3 +1,5 @@
+@import "../../SASS/base/variables.scss";
+
 .container-cardsList {
     padding: 30px;
     margin-top: 20px;
@@ -8,12 +10,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #f6f6f6;
     border-radius: 15px; 
     width: 100%;
+    background-color: map-get($colors, secondary);
 
 }
 
 .container-bannerhome {
     padding: 50px;
+}
+
+@include mediamobile() {
+    .CardsListWrapper {
+        background-color: map-get($colors, none);
+    }
+
+    .container-cardsList {
+        padding-top :0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .container-bannerhome {
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
 }

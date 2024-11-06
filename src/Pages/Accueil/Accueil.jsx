@@ -12,7 +12,7 @@ const Accueil = () => {
             <Banner css="hidden-desktop align-left" bgImage={imgBannerHome} alt="falaise et océan" >Chez vous, <br/>partout et ailleurs</Banner>      
               </div>
             <div className="container-cardsList">
-            <div className="CardsListWrapper"> {/* Conteneur pour la liste des cartes */}
+            <div className="CardsListWrapper bd-block"> {/* Conteneur pour la liste des cartes */}
                 {
                     logements.map((logement) => (
                         // Pour chaque logement, création d'une carte avec un identifiant, un titre et une image de couverture

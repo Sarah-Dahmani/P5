@@ -5,7 +5,6 @@ import Apropos from './Pages/Apropos/Apropos'; // Importation du composant Aprop
 import Logements from './Pages/Logements/Logements'; // Importation du composant Logements.
 import Error from './components/Error/Error'; // Importation du composant d'erreur.
 import Layout from './components/Agencement/Layout'; // Importation du composant de mise en page.
-import './SASS/index.scss'; // Importation du fichier SCSS pour le style.
 
 function AppRoutes () {
   return (

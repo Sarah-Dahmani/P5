@@ -1,4 +1,3 @@
-import '../SASS/components/banner.scss'; // Importation des styles SCSS spécifiques au composant Banner.
 
 const Banner = (props) => {
     const classes = 'banner' + props.css;

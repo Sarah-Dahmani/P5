@@ -31,11 +31,11 @@
     }
 }
 
-@media (max-width : 1023.98px) {
-    .banner {               
+@include mediamobile() {
+    .banner {              
         height: 20vh;
         h1 {
-            font-size: 4vh;
+            font-size: 3.5vh;
             text-align: left;
             padding-left: 20px;
         }

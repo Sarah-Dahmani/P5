@@ -1,4 +1,4 @@
-import './collapse.scss'; // Importation des styles SCSS spécifiques au composant Collapse.
+
 import React, { useState } from 'react'; // Importation de React et du hook useState pour gérer l'état local.
 
 const Collapse = (props) => {
@@ -6,19 +6,21 @@ const Collapse = (props) => {
     
     // Classe conditionnelle pour appliquer un style différent lorsque l'élément est replié.
     // 'collapse' et 'collapsed' 
-    const classes = "collapse" + ( isCollapsed ? ' collapsed' : '' );
+    const classes = (props.cssClasses !== undefined ? props.cssClasses : '' ) + " collapse" + ( isCollapsed ? ' collapsed' : '' );
     return (
         <div className={classes}> {/* Conteneur principal avec les classes CSS appropriées */}
             <div className='collapse-header background-primary'>
-                <span className='collapse-title text-white'>{props.titre}</span>
-                <button className='background-primary text-white' onClick={() => { 
+                <span className='collapse-title text-tertiary'>{props.titre}</span>
+                <button className='background-primary text-tertiary' onClick={() => { 
                          setIsCollapsed(!isCollapsed); // Inversion de l'état isCollapsed
                 }}>
                     <div className="fa-solid fa-chevron-up"></div> {/* Icône de flèche (chevron) */}
                 </button>
             </div>
-            <div className='collapse-content'>{props.children}</div> {/* Contenu affiché lorsque le collapse est ouvert */}
-        </div>
+            <div className="collapse-content background-secondary">
+            <div className="collapse-content-inner">{props.children}</div>
+            </div>
+             </div>
     );
 }
 

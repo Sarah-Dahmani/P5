@@ -2,7 +2,6 @@ import Banner from "../../components/Banner"; // Importation du composant Banner
 import imgBannerAbout from "../../assets/Banner-About.png"; // Importation de l'image à utiliser comme arrière-plan pour la bannière "À propos".
 import Collapse from "../../components/Collapse/Collapse"; // Importation du composant Collapse pour afficher des sections repliables.
 import aproposJson from "../../data/apropos.json"; // Importation des données "À propos" depuis un fichier JSON.
-import './apropos.scss'; // Importation des styles SCSS spécifiques à ce composant.
 
 const Apropos = () => {
     return (

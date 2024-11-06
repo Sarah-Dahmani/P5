@@ -1,3 +1,5 @@
+@import "/src/SASS/base/base.scss";
+
 .container-banner-apropos {
     padding: 30px;
 }
@@ -12,4 +14,11 @@
     gap: 20px;
 
 
+}
+
+@include mediamobile() {
+    .container-CollapseApropos {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }

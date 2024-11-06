@@ -1,4 +1,4 @@
-import "./Slide.scss"; // Importation des styles SCSS pour le composant Slide.
+
 import { useState } from "react"; // Importation du hook useState de React pour gérer l'état local.
 
 const Slide = (props) => {
@@ -18,13 +18,13 @@ const Slide = (props) => {
         //les boutons ne s'affichent que si l'index du tableau slides est supérieur à 1 (+ d'une image)
         //la pagination affiche currentIndex + 1 car la 1ère img = index 0 / le taille du tableau slides
         <div className="SlideShow">
-          {props.slides.length > 1 && (<div className="slideClick fa-solid fa-chevron-left text-white"onClick={prevIndex} role="button"></div>
+          {props.slides.length > 1 && (<div className="slideClick fa-solid fa-chevron-left text-tertiary"onClick={prevIndex} role="button"></div>
           )}
           <div className="slidesWrapper">
             <img key={currentIndex} src={props.slides[currentIndex]} alt="photos" />
-            {props.slides.length > 1 && (<div className="slideshow-pagination text-white">{currentIndex + 1}/{props.slides.length}</div>)}
+            {props.slides.length > 1 && (<div className="slideshow-pagination hidden-mobile text-tertiary">{currentIndex + 1}/{props.slides.length}</div>)}
              </div>
-             {props.slides.length > 1 && (<div className="slideClick fa-solid fa-chevron-right text-white" onClick={nextIndex} role="button"></div>
+             {props.slides.length > 1 && (<div className="slideClick fa-solid fa-chevron-right text-tertiary" onClick={nextIndex} role="button"></div>
       )}
     </div>
   );

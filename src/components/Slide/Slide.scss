@@ -43,11 +43,23 @@
         font-size: 50px;
     }
     
+    @include mediamobile() {
+        font-size: 25px;
+    }
+    
     .fa-chevron-right {
-        right : 50px
+        right : 30px
+    }
+
+    @include mediamobile() {
+        right: 10px;
     }
     
     .fa-chevron-left {
-        left: 50px;
+        left: 30px;
+    }
+
+    @include mediamobile() {
+        left: 10px;
     }
 }

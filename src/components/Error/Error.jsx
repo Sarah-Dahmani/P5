@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"; // Importation du composant Link pour gérer la navigation.
-import "./error.scss"; // Importation des styles SCSS spécifiques au composant d'erreur.
 
 function Error() {
     return (

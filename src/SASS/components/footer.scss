@@ -8,9 +8,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+
+    @include mediamobile() {
+        gap: 15px;
+    }
 
     &__text {
+        display: flex;
         font-size: 18px;
+    }
+
+    @include mediamobile() {
+        font-size: 13px;
+        margin-top: 0;
+        width: 8em;
     }
 }
