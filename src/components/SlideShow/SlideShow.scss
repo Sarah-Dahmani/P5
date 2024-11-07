@@ -1,0 +1,72 @@
+.slideShow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.SlideShow {
+    max-height: 400px;
+    display: flex;
+
+}
+
+.slidesWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include mediamobile() {
+        height: 11rem;
+    }
+
+    img {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+    }
+}
+
+.slideshow-pagination {
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    padding: 0.31em 0.62em;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.slideClick {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: 45%;
+    font-size: 50px;
+
+
+    @include mediamobile() {
+        font-size: 25px;
+    }
+
+}
+
+.fa-chevron-right {
+    right: 30px;
+
+    @include mediamobile() {
+        right: 10px;
+    }
+}
+
+.fa-chevron-left {
+    left: 30px;
+
+
+    @include mediamobile() {
+        left: 10px;
+    }
+}
