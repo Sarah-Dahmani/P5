@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    position: relative;
+    margin-top: 5%;
 
     @include mediamobile() {
         gap: 15px;
@@ -22,6 +24,5 @@
     @include mediamobile() {
         font-size: 13px;
         margin-top: 0;
-        width: 8em;
     }
 }

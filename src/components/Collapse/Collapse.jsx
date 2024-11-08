@@ -11,11 +11,11 @@ const Collapse = (props) => {
         <div className={classes}> {/* Conteneur principal avec les classes CSS appropriées */}
             <div className='collapse-header background-primary'>
                 <span className='collapse-title text-tertiary'>{props.titre}</span>
-                <button className='background-primary text-tertiary' onClick={() => { 
+                <div className='button background-primary text-tertiary' onClick={() => { 
                          setIsCollapsed(!isCollapsed); // Inversion de l'état isCollapsed
                 }}>
                     <div className="fa-solid fa-chevron-up"></div> {/* Icône de flèche (chevron) */}
-                </button>
+                </div>
             </div>
             <div className="collapse-content background-secondary">
             <div className="collapse-content-inner">{props.children}</div>

@@ -5,7 +5,7 @@ import aproposJson from "../../data/apropos.json"; // Importation des données "
 
 const Apropos = () => {
     return (
-        <div>
+        <div className="a-propos">
             <div className="container-banner-apropos">
             {/* Affichage de la bannière avec l'image de fond et un texte alternatif */}
             <Banner bgImage={imgBannerAbout} alt="montagne et forêt" />

@@ -18,7 +18,7 @@
     width: 100%;
 
     @include mediamobile() {
-        height: 11rem;
+        height: 8rem;
     }
 
     img {
@@ -28,6 +28,10 @@
         object-fit: cover;
         object-position: center;
         border-radius: 25px;
+
+        @include mediamobile() {
+            //height: 15em;
+        }
     }
 }
 

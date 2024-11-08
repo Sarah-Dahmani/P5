@@ -32,9 +32,11 @@
         }
 
         nav {
-            font-size: 2vh;
+            font-size: 1.5vh;
             text-transform: uppercase;
             font-weight: bold;
+            position: relative;
+            right: 50px;
         }
     }
 }
