@@ -1,27 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SlideShow = (props) => {
-  //useState retourne un tableau avec les 2 éléments currentIndex et setCurrentIndex
-  //setCurrentIndex permet de modifier la valeur de currentIndex
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalTime = 3000; // Durée d'affichage de chaque image (en millisecondes)
 
-  //fonction next : si le currentindex + 1 est supérieur ou égal à l'index -1 (dernier élément)
-  //alors currentindex = 0 (1er élément) sinon +1
+  // Fonction pour passer à l'image suivante
   const nextIndex = () => {
-    setCurrentIndex(
-      currentIndex + 1 > props.slides.length - 1 ? 0 : currentIndex + 1
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 > props.slides.length - 1 ? 0 : prevIndex + 1
     );
   };
-  //fonction prev : si le currentindex - 1 est inférieur à l'index 0 (1er élément)
-  //alors currentindex passe au dernier index (dernier élément)
+
+  // Définir un intervalle pour faire tourner le carrousel automatiquement
+  useEffect(() => {
+    const intervalId = setInterval(nextIndex, intervalTime);
+
+    // Nettoyer l'intervalle lorsque le composant est démonté
+    return () => clearInterval(intervalId);
+  }, [currentIndex, props.slides.length]);
+
+  // Fonction pour revenir à l'image précédente (si tu veux ajouter un contrôle manuel)
   const prevIndex = () => {
-    setCurrentIndex(
-      currentIndex - 1 < 0 ? props.slides.length - 1 : currentIndex - 1
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? props.slides.length - 1 : prevIndex - 1
     );
   };
+
   return (
-    //les boutons ne s'affichent que si l'index du tableau slides est supérieur à 1 (+ d'une image)
-    //la pagination affiche currentIndex + 1 car la 1ère img = index 0 / le taille du tableau slides
     <div className="SlideShow">
       {props.slides.length > 1 && (
         <div
@@ -31,7 +36,12 @@ const SlideShow = (props) => {
         ></div>
       )}
       <div className="slidesWrapper">
-        <img key={currentIndex} src={props.slides[currentIndex]} alt="photos" />
+        <img
+          key={currentIndex}
+          src={props.slides[currentIndex]}
+          alt="photos"
+          className="fade-in"
+        />
         {props.slides.length > 1 && (
           <div className="slideshow-pagination hidden-mobile text-tertiary">
             {currentIndex + 1}/{props.slides.length}

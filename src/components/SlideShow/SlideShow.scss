@@ -16,9 +16,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    overflow: hidden;
 
     @include mediamobile() {
-        height: 8rem;
+        height: 11rem;
     }
 
     img {
@@ -28,10 +29,6 @@
         object-fit: cover;
         object-position: center;
         border-radius: 25px;
-
-        @include mediamobile() {
-            //height: 15em;
-        }
     }
 }
 

@@ -4,6 +4,14 @@
     padding: 30px;
     margin-top: 20px;
     margin-bottom: 20px; 
+
+    @include mediamobile() {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 90%;
+    }
 }
 
 .CardsListWrapper {
@@ -14,26 +22,24 @@
     width: 100%;
     background-color: map-get($colors, secondary);
 
+    @include mediamobile() {
+        background-color: map-get($colors, none);
+        width: 100%;
+    }
 }
 
-.container-bannerhome {
-    padding: 50px;
+    .container-bannerhome {
+        padding: 30px;
+
+        @include mediamobile() {
+            padding-bottom: 20px;
+            padding-top: 10px;
+    }
 }
 
 @include mediamobile() {
-    .CardsListWrapper {
-        background-color: map-get($colors, none);
-    }
-
-    .container-cardsList {
-        padding-top :0;
-        padding-bottom: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .container-bannerhome {
-        padding-bottom: 20px;
-        padding-top: 10px;
+    html,body{
+    width: 100%;
+    overflow-x: hidden;
     }
 }

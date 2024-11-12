@@ -13,11 +13,7 @@
     margin-bottom: 40px;
     gap: 20px;
 
-
-}
-
 @include mediamobile() {
-    .container-CollapseApropos {
         padding-left: 30px;
         padding-right: 30px;
     }
